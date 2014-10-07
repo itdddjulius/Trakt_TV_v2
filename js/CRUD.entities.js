@@ -12,6 +12,7 @@ var Serie = CRUD.define({
     table: 'Series',
     primary: 'ID_Serie',
     fields: ['ID_Serie', 'name', 'banner', 'overview', 'TVDB_ID', 'IMDB_ID', 'TVRage_ID', 'networkid', 'seriesid', 'zap2it_id', 'actors', 'airs_dayofweek', 'airs_time', 'contentrating', 'firstaired', 'genre', 'language', 'network', 'rating', 'ratingcount', 'runtime', 'status', 'added', 'addedby', 'fanart', 'poster', 'lastupdated', 'lastfetched', 'nextupdate', 'displaycalendar'],
+    indexes: ['TVDB_ID'],
     relations: {
         'Episode': CRUD.RELATION_FOREIGN,
         'Season': CRUD.RELATION_FOREIGN
@@ -238,4 +239,4 @@ var WatchListObject = CRUD.define({
 });
 
 
-CRUD.setAdapter(new CRUD.SQLiteAdapter('seriesguide_chrome'));
+CRUD.setAdapter(new CRUD.IndexedDBAdapter('seriesguide_chrome'));
