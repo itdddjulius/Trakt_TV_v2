@@ -93,12 +93,17 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
 			var store = transaction.objectStore(what); 
 
 			if(Object.keys(filters).length > 0) {
-				Object.keys(filters).map(function(el) {
-					if(store.indexNames.contains(el)) {
-						keyName = el;
-						console.log("Found a custom key to use in query!");
-					}
-				})
+				if(!('length' in filters)) {
+					Object.keys(filters).map(function(el) {
+						if(store.indexNames.contains(el)) {
+							keyName = el;
+							console.log("Found a custom key to use in query!");
+						}
+					})
+				} else {
+					keyName = CRUD.EntityManager.entities[what].primary;
+					console.log("Custom query -> switchign to main index:", keyName);
+				}
 			}
 
 			if(keyName !== null) {
@@ -112,24 +117,58 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
 				console.log("Query result for ", keyName, event.target[keyName], filters, event.target);
 				if(event.target.result) {
 					if(filters) {
-						Object.keys(filters).map(function(key) {
-							if(event.target.result.value[key] == filters[key]) {
-								output.push(new window[what]().importValues(event.target.result.value));
+						if('length' in filters) {
+							for(var i=0; i< filters.length; i++) {
+								var parts = filters[i].split(' AND ');
+								var matches = 0;
+								for(var j = 0; j< parts.length; j++) {
+									console.log("Filter expression!" , parts[j]);
+									var filter = parts[j].split(' ');
+									// very naive stuff happening here.
+									switch(filter[1]) {
+										case '>':
+											matches += event.target.result.value[filter[0]] > parseInt(filter[2],10) ? 1 : 0;
+										break;
+										case '<':
+											matches += event.target.result.value[filter[0]] < parseInt(filter[2],10) ? 1 : 0;
+										break;
+										case '=':
+											matches += event.target.result.value[filter[0]] == filter[2] ? 1 : 0;
+										break;
+										case 'in':
+											if(filter[2] == '()') {
+											 matches += 1;
+											} 
+											else {
+												debugger;
+												// todo
+											}
+										break;
+									}
+								}
+								if(matches == parts.length) {
+									console.log("OFMG its a match xD", matches, parts, event.target.result.value)
+								}
 							}
-						})
+						} else {
+						Object.keys(filters).map(function(key) {
+								if(event.target.result.value[key] == filters[key]) {
+									output.push(new window[what]().importValues(event.target.result.value));
+								}
+							})
+						}
 					} else {
 						output.push(new window[what]().importValues(event.target.result.value));
 					}	
                 	if('continue' in event.target.result) {
                     	event.target.result.continue();
+                    } else {
+                    	resolve(output); // return items
                     }	
                 }
                 	
 			};
-				     
-		    transaction.oncomplete = function (event) {
-	            resolve(output); // return items
-	        };
+			
 			request.onerror = function(e) {
 				CRUD.log('IndexeDB Error in FIND : ',e, what, this);
 				debugger;
