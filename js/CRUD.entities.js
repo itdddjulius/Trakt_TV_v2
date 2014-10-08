@@ -97,6 +97,9 @@ var Episode = CRUD.define({
     table: 'Episodes',
     primary: 'ID_Episode',
     fields: ['ID_Episode', 'ID_Serie', 'ID_Season', 'TVDB_ID', 'episodename', 'episodenumber', 'firstaired', 'imdb_id', 'language', 'overview', 'rating', 'ratingcount', 'seasonnumber', 'filename', 'lastupdated', 'seasonid', 'seriesid', 'lastchecked', 'watched', 'watchedAt', 'magnetHash'],
+    indexes: [
+        'TVDB_ID','ID_Serie'
+    ],
     relations: {
         'Serie': CRUD.RELATION_FOREIGN,
         'Season': CRUD.RELATION_FOREIGN

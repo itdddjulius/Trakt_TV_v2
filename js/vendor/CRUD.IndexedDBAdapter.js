@@ -11,7 +11,7 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
 		var that = this;
 		return new Promise(function(resolve, fail) {
 			var indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
-			var e  = indexedDB.open(that.databaseName, Number(1));
+			var e  = indexedDB.open(that.databaseName+'3', Number(3));
 			e.onupgradeneeded = that.verifyTables.bind(that);
 			e.onsuccess = function(e) {
 				that.db = e.target.result;
@@ -41,6 +41,7 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
 
 	this.verifyTables = function(e) {
 		CRUD.log('verifying that tables are in sync');
+
 		this.db = e.target.result;
         for(var i in CRUD.EntityManager.entities) {
 			var entity = CRUD.EntityManager.entities[i];
@@ -66,7 +67,10 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
 							if( CRUD.EntityManager.entities[related]) {
 								if(rel && rel.primary) {
 									CRUD.log("Creating indexes for relation keys: ",related, rel.primary);
+									try {
+
 									store.createIndex(rel.primary,rel.primary, {unique:false});	
+									} catch(e) {}
 								}
 							}
 						break;
@@ -165,6 +169,8 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
                     } else {
                     	resolve(output); // return items
                     }	
+                } else {
+                	resolve(output);
                 }
                 	
 			};
@@ -174,6 +180,7 @@ CRUD.IndexedDBAdapter = function(database, dbOptions) {
 				debugger;
 				fail();
 			}
+                
 			
 		});
 	}
