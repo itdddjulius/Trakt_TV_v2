@@ -63,11 +63,11 @@ The project doesn’t have very specific milestones and they never have a set de
 Once a feature is ready to be deployed it is released. This makes sense if we consider how many things are being worked at at the same time. If they were too focused on a particular milestone, other areas would need to be left for later, and the so highly valued freedom that the team has would be diminished.
 
 ### Conclusions
-Summing up, DuckieTV as a open-source project built for fun does not have a strict software development method.
+Summing up, DuckieTV, as an open-source project built for fun, does not have a strict software development method.
 
-The developers of the project had no idea what kind of development methods existed mainly because they wanted to keep it simple and with “as little as possible ‘Project Management’”. Although after our introduction to this subject they think the project is very much like Agile (Incremental development and Delivery).
+The developers of the project didn't follow any specific existing methods on purpose, because they wanted to keep it simple and with “as little as possible ‘Project Management’”. However, after our introduction to this subject, they think the project is very much like Agile (Incremental development and Delivery).
 
-DuckieTV has a lot of commits, several working branches each one with its own feature associated and four main contributors, two of them are the reviewers of the pull requests. Everything is done in the spare time and that explains the spikes in the commits graphic.
+DuckieTV has a lot of commits, several working branches each one with its own feature associated and four main contributors, two of them are also the reviewers of the pull requests. Everything is done in the developer's spare time as a learning experience.
 
 ### Authors
 * João Silva ([up201305892@fe.up.pt](mailto:up201305892@fe.up.pt))
