@@ -13,7 +13,7 @@ The project was originally created by “SchizoDuckie” as an AngularJS learnin
 
 ### Software Development Process
 
-DuckieTV does not have any specifically defined Software Development Process, as the author explains,
+DuckieTV does not have any specifically defined Software Development Process, as the author explains in a [conversation](https://github.com/SchizoDuckie/DuckieTV/pull/565) with us,
 
 > Things aren’t prototyped, mostly not even sketched out but are just ideas or concepts that grow in our minds.
 
