@@ -70,8 +70,9 @@ The developers of the project had no idea what kind of development methods exist
 DuckieTV has a lot of commits, several working branches each one with its own feature associated and four main contributors, two of them are the reviewers of the pull requests. Everything is done in the spare time and that explains the spikes in the commits graphic.
 
 ### Authors
-* João Silva (up201305892@fe.up.pt)
-* Luís Figueiredo (up20130 @fe.up.pt)
-* Pedro Teles (up201305101@fe.up.pt)
+* João Silva ([up201305892@fe.up.pt](mailto:up201305892@fe.up.pt)
+* Luís Figueiredo ([up201304295@fe.up.pt](mailto:up201304295@fe.up.pt)
+* Pedro Teles ([up201305101@fe.up.pt](mailto:up201305101@fe.up.pt))
 
-**Faculdade de Engenharia da Universidade do Porto - MIEIC                 2015-10-04**
+**Faculdade de Engenharia da Universidade do Porto - MIEIC**
+**2015-10-04**
