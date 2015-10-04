@@ -11,7 +11,6 @@ The project was originally created by “SchizoDuckie” as an AngularJS learnin
 > "In the end DuckieTV is a project that was built for fun by people in their free time so working on it should be as fun as possible."
 
 
-
 ### Software Development Process
 
 DuckieTV does not have any specifically defined Software Development Process, as the author explains,
@@ -36,14 +35,12 @@ In order to improve communication between the team, and also because it is mostl
 
 ### Critical Analysis
 
-
 #### Code
 
 After going through innumerous code  files, it is easy to realize that these are well structured and full of comments that help create a better understanding of what is their purpose and why it was done like that.
 
 In general, the API is well documented and its code files are organized in packages with specific functions, which also helps in a better understanding of a project with this size.
 There are also multiple markdown files containing additional information and documentation regarding implemented features, explaining what they do for those who don’t want to look at the code, but just get the general idea. This is brilliant because it allows better abstraction for new features that need to be linked to old ones, but don’t require in-depth knowledge to be developed. Sadly, this documentation doesn’t exist for every feature yet.
-
 
 #### Commits
 
@@ -55,19 +52,15 @@ The message of the commit is self-explanatory of what the commit fixes and/or ad
 
 At the time of this report the team is still adding new features as well as fixing issues.
 
-
 #### Repository
 Being an open source project with multiple contributions by many collaborators, it is hard to control all the pull requests coming in without a global understanding of the project. All collaborators can share their opinion on a pull request but it is the creator and “garfield69” that have the final say on a pull-request being accepted or declined. 
 
 This method isn’t very practical because all the work of analysing and testing the new features falls on two people, who are also main contributors, which overloads them. Because of this overload, we think it is important to add a reviewer to the group to make it easier and quicker to either accept or decline the pull request.
 
-
 #### Milestones
 The project doesn’t have very specific milestones and they never have a set deadline. Issues in the product are identified, catalogued and set up for future work upon, but there is never a specific milestone that needs to be met for a release. 
 
 Once a feature is ready to be deployed it is released. This makes sense if we consider how many things are being worked at at the same time. If they were too focused on a particular milestone, other areas would need to be left for later, and the so highly valued freedom that the team has would be diminished.
-
-
 
 ### Conclusions
 Summing up, DuckieTV as a open-source project built for fun does not have a strict software development method.
@@ -75,8 +68,6 @@ Summing up, DuckieTV as a open-source project built for fun does not have a stri
 The developers of the project had no idea what kind of development methods existed mainly because they wanted to keep it simple and with “as little as possible ‘Project Management’”. Although after our introduction to this subject they think the project is very much like Agile (Incremental development and Delivery).
 
 DuckieTV has a lot of commits, several working branches each one with its own feature associated and four main contributors, two of them are the reviewers of the pull requests. Everything is done in the spare time and that explains the spikes in the commits graphic.
-
-
 
 ### Authors
 * João Silva (up201305892@fe.up.pt)
