@@ -4,7 +4,7 @@
 
 ### Project Description
 
-Duckie Tv is a program for TV and movie enthusiasts with the goal of helping you track down your favorite series and films alongside a customized calendar. By now it has been extended to also help you find safe and updated torrent links for you to download and watch your episodes. All of this is available on the great majority of platforms.
+DuckieTV is a program for TV and movie enthusiasts with the goal of helping you track down your favorite series and films alongside a customized calendar. By now it has been extended to also help you find safe and updated torrent links for you to download and watch your episodes. All of this is available on the great majority of platforms.
 
 The project was originally created by “SchizoDuckie” as an AngularJS learning project, but scaled into a collaboration project with over 300.000 code lines committed by 4 main collaborators and reviewed mostly by themselves, too. In spite of having reached a much bigger size than originally planned for, the developers still maintain the original working philosophy: 
 
