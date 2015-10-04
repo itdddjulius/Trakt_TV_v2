@@ -11,6 +11,7 @@ The project was originally created by “SchizoDuckie” as an AngularJS learnin
 > "In the end DuckieTV is a project that was built for fun by people in their free time so working on it should be as fun as possible."
 
 
+
 ### Software Development Process
 
 DuckieTV does not have any specifically defined Software Development Process, as the author explains,
@@ -31,7 +32,10 @@ Some ideas, however, are too big to be handled without a structure. Because of t
 
 In order to improve communication between the team, and also because it is mostly a learning project, Schizo started to develop graphs and diagrams to share with the team, explaining how the functionality is structured, as can be seen on most of the files he overwatches, like [*EVENTS.md*](https://github.com/SchizoDuckie/DuckieTV/blob/angular/EVENTS.md).
 
+
+
 ### Critical Analysis
+
 
 #### Code
 
@@ -39,6 +43,7 @@ After going through innumerous code  files, it is easy to realize that these are
 
 In general, the API is well documented and its code files are organized in packages with specific functions, which also helps in a better understanding of a project with this size.
 There are also multiple markdown files containing additional information and documentation regarding implemented features, explaining what they do for those who don’t want to look at the code, but just get the general idea. This is brilliant because it allows better abstraction for new features that need to be linked to old ones, but don’t require in-depth knowledge to be developed. Sadly, this documentation doesn’t exist for every feature yet.
+
 
 #### Commits
 
@@ -63,12 +68,14 @@ The project doesn’t have very specific milestones and they never have a set de
 Once a feature is ready to be deployed it is released. This makes sense if we consider how many things are being worked at at the same time. If they were too focused on a particular milestone, other areas would need to be left for later, and the so highly valued freedom that the team has would be diminished.
 
 
+
 ### Conclusions
 Summing up, DuckieTV as a open-source project built for fun does not have a strict software development method.
 
 The developers of the project had no idea what kind of development methods existed mainly because they wanted to keep it simple and with “as little as possible ‘Project Management’”. Although after our introduction to this subject they think the project is very much like Agile (Incremental development and Delivery).
 
 DuckieTV has a lot of commits, several working branches each one with its own feature associated and four main contributors, two of them are the reviewers of the pull requests. Everything is done in the spare time and that explains the spikes in the commits graphic.
+
 
 
 ### Authors
