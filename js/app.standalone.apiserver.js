@@ -10,10 +10,20 @@ DuckieTV.factory('HTTPAPIServer', ["FavoritesService", "CalendarEvents", "$q", f
 
     var methodRouters = {
 
-      '/api/today': function() {
+      '/api/calendar/today': function() {
           return $q(function(resolve) {
-            resolve(CalendarEvents.getEvents(new Date()));
+            resolve(FavoritesService.getEpisodesForDateRange(moment().startOf("day").toDate().getTime(),moment().endOf("day").toDate().getTime()));
           });
+      },
+      '/api/calendar/thismonth': function() {
+        return $q(function(resolve) {
+          resolve(FavoritesService.getEpisodesForDateRange(moment().startOf("month").toDate().getTime(), moment().endOf("month").toDate().getTime()));
+        });
+      },
+      '/api/calendar/thisweek': function() {
+        return $q(function(resolve) {
+          resolve(FavoritesService.getEpisodesForDateRange(moment().startOf("week").toDate().getTime(), moment().endOf("week").toDate().getTime()));
+        });
       },
       '/api/favorites': function() {
           return $q(function(resolve) {
