@@ -75,6 +75,8 @@ DuckieTV.factory('HTTPAPIServer', ["FavoritesService", "CalendarEvents", "$q", f
 
 DuckieTV.run(["HTTPAPIServer", "SettingsService",
     function(HTTPAPIServer, SettingsService) {
+      if (navigator.userAgent.toLowerCase().indexOf('standalone') !== -1 && SettingsService.get('apiserver.enabled')) {
         HTTPAPIServer.start();
+      }
     }
 ]);
