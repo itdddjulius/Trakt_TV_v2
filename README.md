@@ -51,6 +51,4 @@ Screenshots:
 
 
 
-Please open a [GitHub ticket](https://github.com/SchizoDuckie/DuckieTV/issues/new) or start a [Reddit thread](http://reddit.com/r/duckietv/) if there is anything else that needs improvement.
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
